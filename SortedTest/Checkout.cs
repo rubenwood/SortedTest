@@ -52,7 +52,6 @@ namespace SortedTest
                 {
                     total += item.UnitPrice;
                 }
-                Console.WriteLine("END TOTAL:  " + total);
             }
         }
 

@@ -36,8 +36,9 @@ namespace SortedTest
             Checkout myCO = new Checkout();
             foreach(Item i in items)
             {
-                myCO.Scan(i); // need to write scan function now
+                myCO.Scan(i); // Scans each item
             }
+            Console.WriteLine("END TOTAL:  " + myCO.total); // logs total
 
             Console.ReadKey();
         }
