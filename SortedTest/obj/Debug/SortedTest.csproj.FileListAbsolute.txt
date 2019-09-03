@@ -1,0 +1,7 @@
+C:\Users\Ruben\Desktop\Sorted\SortedKata\SortedTest\SortedTest\bin\Debug\SortedTest.exe.config
+C:\Users\Ruben\Desktop\Sorted\SortedKata\SortedTest\SortedTest\bin\Debug\SortedTest.exe
+C:\Users\Ruben\Desktop\Sorted\SortedKata\SortedTest\SortedTest\bin\Debug\SortedTest.pdb
+C:\Users\Ruben\Desktop\Sorted\SortedKata\SortedTest\SortedTest\obj\Debug\SortedTest.csprojAssemblyReference.cache
+C:\Users\Ruben\Desktop\Sorted\SortedKata\SortedTest\SortedTest\obj\Debug\SortedTest.csproj.CoreCompileInputs.cache
+C:\Users\Ruben\Desktop\Sorted\SortedKata\SortedTest\SortedTest\obj\Debug\SortedTest.exe
+C:\Users\Ruben\Desktop\Sorted\SortedKata\SortedTest\SortedTest\obj\Debug\SortedTest.pdb
