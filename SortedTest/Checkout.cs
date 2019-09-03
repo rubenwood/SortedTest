@@ -7,13 +7,32 @@ using System.Threading.Tasks;
 namespace SortedTest
 {
     class Checkout
-    { 
+    {
+
+        public decimal total = 0; // used to store the total price
+
         // Used to scan an item
+        // expects an instance of an item
         public void Scan(Item item)
         {
+            if(item != null)
+            {
+                // if the item is on offer, check to see if we have scanned enough of them
+                // if so add the offer price and subtract out any previous UnitPrices for that item we have added
+                // if not on offer then just add the usual UnitPrice
 
+                if (item.hasOffer)
+                {
+
+                }
+                else
+                {
+                    total += item.UnitPrice;
+                }
+            }
         }
 
+        // Do we need this?
         // calculates and returns total price
         public decimal Total()
         {

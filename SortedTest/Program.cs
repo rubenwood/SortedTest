@@ -21,7 +21,22 @@ namespace SortedTest
 
             /// make sure the Item class has been establilshed, log out some info belonging to an Item
             Console.WriteLine(apple.SKU);
-            Console.WriteLine(apple.UnitPrice);
+            Console.WriteLine(apple.UnitPrice + "\n------------");
+
+            ///Good idea to create a list of items
+            List<Item> items = new List<Item>();
+            /// Adding some items to the list, out of order
+            items.Add(bisc);
+            items.Add(apple);
+            items.Add(bisc);
+
+            /// now when we run our scan function we can put it in loop and loop through the items
+            /// Need to make an instance of the checkout class in order to access scan function
+            Checkout myCO = new Checkout();
+            foreach(Item i in items)
+            {
+                myCO.Scan(i); // need to write scan function now
+            }
 
             Console.ReadKey();
         }
