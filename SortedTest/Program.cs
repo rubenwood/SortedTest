@@ -29,9 +29,7 @@ namespace SortedTest
             items.Add(bisc);
             items.Add(apple);
             items.Add(bisc);
-            items.Add(apple);
-            items.Add(apple);
-            // above should output "ENOUGH FOR OFFER!" twice
+            //above should log an END TOTAL of: 0.95
 
             /// now when we run our scan function we can put it in loop and loop through the items
             /// Need to make an instance of the checkout class in order to access scan function

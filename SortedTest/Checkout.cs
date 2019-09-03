@@ -38,13 +38,17 @@ namespace SortedTest
                     if (howMany % item.offerAmnt == 0)
                     {
                         Console.WriteLine("ENOUGH FOR OFFER!");
+                        // since this completes an offer we must subtract any previous instances of item.unitprice that has been added
+                        total -= (item.offerAmnt - 1) * item.UnitPrice;
+                        //then we can add the offer price instead
+                        total += item.offerPice;
                     }
-
                 }
                 else
                 {
                     total += item.UnitPrice;
                 }
+                Console.WriteLine("END TOTAL:  " + total);
             }
         }
 
