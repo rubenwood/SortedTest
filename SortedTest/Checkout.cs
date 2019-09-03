@@ -11,6 +11,8 @@ namespace SortedTest
 
         public decimal total = 0; // used to store the total price
 
+        private List<string> scannedWithOffer = new List<string>();
+
         // Used to scan an item
         // expects an instance of an item
         public void Scan(Item item)
@@ -23,6 +25,20 @@ namespace SortedTest
 
                 if (item.hasOffer)
                 {
+                    // first we need to track what item was scanned and determine how many of that item we have scanned so far
+                    // create a list to store scanned items with an offer, store the SKU's
+                    // then count those SKU's to see if we have reached the amount required for an offer
+                    scannedWithOffer.Add(item.SKU);
+                    // so far this list is storing any SKU that has been scanned an has an offer
+                    // what we really want to is to count SKU's that are the same
+                    // need a different function for that
+                    int howMany = countSKU(scannedWithOffer, item.SKU);
+                    // now we now how many of that SKU are in the list
+                    // if how many is evenly divisible by the offer amount then we have enough for the offer to take effect
+                    if (howMany % item.offerAmnt == 0)
+                    {
+                        Console.WriteLine("ENOUGH FOR OFFER!");
+                    }
 
                 }
                 else
@@ -30,6 +46,20 @@ namespace SortedTest
                     total += item.UnitPrice;
                 }
             }
+        }
+
+        // this function will count how many of a specific SKU occur in a list of SKU's
+        private int countSKU(List<string> skus, string sku)
+        {
+            int count = 0;
+            foreach(string s in skus)
+            {
+                if(s != null && s == sku)
+                {
+                    count++;
+                }
+            }
+            return count;
         }
 
         // Do we need this?
