@@ -43,6 +43,10 @@ namespace SortedTest
                         //then we can add the offer price instead
                         total += item.offerPice;
                     }
+                    else // Remember that we still need to add the item price even if we dont yet have enough for the offer
+                    {
+                        total += item.UnitPrice;
+                    }
                 }
                 else
                 {
@@ -64,13 +68,6 @@ namespace SortedTest
                 }
             }
             return count;
-        }
-
-        // Do we need this?
-        // calculates and returns total price
-        public decimal Total()
-        {
-            return 0;
         }
     }
 
